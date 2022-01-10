@@ -22,22 +22,22 @@ hbs.registerPartials(path.join(__dirname, '../templates/partials'))
 app.get('', (req, res) => {
   res.render('index', {
     title: 'Weather',
-    name: 'Bruce Wayne',
+    name: 'M Fadlan Ridho',
   })
 })
 
 app.get('/about', (req, res) => {
   res.render('about', {
     title: 'About me',
-    name: 'Bruce Wayne',
+    name: 'M Fadlan Ridho',
   })
 })
 
 app.get('/help', (req, res) => {
   res.render('help', {
     title: 'Help',
-    name: 'Bruce Wayne',
-    message: 'This is a very helpful message'
+    name: 'M Fadlan Ridho',
+    message: 'This is a very helpful message.'
   })
 })
 
@@ -66,7 +66,7 @@ app.get('/weather', (req, res) => {
 app.get('/products', (req, res) => {
   if (!req.query.search) {
     return res.send({
-      error: 'You must provide a search here'
+      error: 'You must provide a search here!'
     })
   }
   console.log(req.query)
@@ -79,16 +79,16 @@ app.get('/products', (req, res) => {
 app.get('/help/*', (req, res) => {
   res.render('404', {
     title: 404,
-    name: 'Bruce Wayne',
-    errorMessage: 'Help article not found'
+    name: 'M Fadlan Ridho',
+    errorMessage: 'Help article not found.'
   })
 })
 
 app.get('*', (req, res) => {
   res.render('404', {
     title: '404',
-    name: 'Bruce Wayne',
-    errorMessage: 'Page not found'
+    name: 'M Fadlan Ridho',
+    errorMessage: 'Page not found.'
   })
 })
 
